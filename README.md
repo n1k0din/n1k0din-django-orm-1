@@ -7,10 +7,10 @@
 - длительность визитов
 
 ### Запуск
-1. git clone
-2. python -m venv venv
-3. python venv\scripts\activate.bat (win) OR source myvenv/bin/activate (nix)
-4. pip install -r requirements.txt
-5. python main.py
+1. `git clone`
+2. `python -m venv venv`
+3. `python venv\scripts\activate.bat` (win) или `source myvenv/bin/activate` (nix)
+4. `pip install -r requirements.txt`
+5. `python main.py`
 
 Запускается по адресу 0.0.0.0:8080.
