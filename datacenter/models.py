@@ -29,8 +29,7 @@ class Visit(models.Model):
 
     def get_duration(self):
         local_entered_at = localtime(self.entered_at)
-        local_leaved_at = localtime(self.leaved_at) if self.leaved_at \
-            else localtime()
+        local_leaved_at = localtime(self.leaved_at)
 
         return int((local_leaved_at - local_entered_at).total_seconds())
 
@@ -38,13 +37,7 @@ class Visit(models.Model):
         return self.get_duration() // 60 > minutes
 
     def format_duration(self, duration):
-        hours = str(duration // 3600)
-        minutes = str((duration % 3600) // 60)
-
-        if len(hours) == 1:
-            hours = f"0{hours}"
-
-        if len(minutes) == 1:
-            minutes = f"0{minutes}"
+        hours = "{:02d}".format(duration // 3600)
+        minutes = "{:02d}".format((duration % 3600) // 60)
 
         return f"{hours}:{minutes}"
