@@ -1,4 +1,5 @@
 import os
+from distutils.util import strtobool
 
 DATABASES = {
     'default': {
@@ -15,7 +16,7 @@ INSTALLED_APPS = ['datacenter']
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
-DEBUG = True
+DEBUG = bool(strtobool(os.getenv('DJANGO_DEBUG')))
 
 ROOT_URLCONF = "project.urls"
 
