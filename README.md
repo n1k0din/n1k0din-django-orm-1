@@ -31,6 +31,10 @@
     pip install -r requirements.txt
     ```
 5. Подготовьте переменные окружения:
+  - `DB_ENGINE=движок_базы_данных` (пр. `django.db.backends.postgresql_psycopg2`)
+  - `DB_PORT=порт_базы_данных` (пр. `5434`)
+  - `DB_NAME=название_базы_данных` (пр. `checkpoint`)
+  - `DB_USER=имя_пользователя_базы_данных` (пр. `guard`)
   - `DB_HOST=адрес_хоста_базы_данных` (пр. `localhost`)
   - `DB_PASSWORD=пароль_базы_данных`
   - `DJANGO_SECRET_KEY=секретный_ключ_django` (пр. `REPLACE_ME`)
