@@ -34,7 +34,8 @@
   - `DB_HOST=адрес_хоста_базы_данных` (пр. `localhost`)
   - `DB_PASSWORD=пароль_базы_данных`
   - `DJANGO_SECRET_KEY=секретный_ключ_django` (пр. `REPLACE_ME`)
-  - `DJANGO_DEBUG=режим_отладки` (`True` или `False`).
+  - `DJANGO_DEBUG=режим_отладки` (`True` или `False`)
+  - `ALLOWED_HOSTS=список_ваших_сайтов` (пр. `localhost,127.0.0.1,mysite.com`).
 
 6. Запустите (пример: на всех интерфейсах, порт 8080)
   ```bash
